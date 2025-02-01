@@ -2,13 +2,13 @@
 
 int main(){ 
 
-   char op;
+   char operator;
    double num1;
    double num2;
    double result;
 
-   printf("\nEnter an op (+ - * /): ");
-   scanf(" %c", &op);
+   printf("\nEnter an operator (+ - * /): ");
+   scanf(" %c", &operator);
 
    printf("Enter number 1: ");
    scanf("%lf", &num1);
@@ -16,25 +16,25 @@ int main(){
    printf("Enter number 2: ");
    scanf("%lf", &num2);
 
-   switch(op){
+   switch(operator){
       case '+':
          result = num1 + num2;
-         printf("\nresult: %.2lf", result);
+         printf("\nresult: %lf", result);
          break;
       case '-':
          result = num1 - num2;
-         printf("\nresult: %.2lf", result);
+         printf("\nresult: %lf", result);
          break;
       case '*':
          result = num1 * num2;
-         printf("\nresult: %.2lf", result);
+         printf("\nresult: %lf", result);
          break;
        case '/':
          result = num1 / num2;
-         printf("\nresult: %.2lf", result);
+         printf("\nresult: %lf", result);
          break;
       default:
-         printf("%c is not valid", op);
+         printf("%c is not valid", operator);
 
    } 
    
