@@ -1,7 +1,10 @@
 #include <stdio.h>
 #include <stdbool.h>
+#include <string.h>
+#include <math.h>
+#include <ctype.h>
   
-int main(){
+int main(){ 
     //Data types 
 
     //char a = 'C'; // single character  %c focus on chars 
@@ -62,8 +65,8 @@ int main(){
   printf("Item 2: $%-8.2f\n", item2);
   printf("Item 3: $%-8.2f\n", item3);*/
 
-  int x = 5;
-  int y = 2;
+  //int x = 5;
+  //int y = 2;
 
   //int z = x + y;
   //int z = x - y;
@@ -71,9 +74,164 @@ int main(){
   //float z = x / (float) y;
   //int z = x % y;
   //x++;
-  y--;
-  printf("%d",y);
+  //y--;
+  //printf("%d",y);
+
+/*augmented assignment operators = used to replace a statement where an 
+                                   operator takes a variable as one of its 
+                                   arguments and then assigns the result
+                                   back to the same variable
+                                   x = x + 1
+                                   X+=1*/
+  //int x = 10;
+
+//x = x + 2;
+      //x+=2;
+
+ //x = x - 3;
+  //x-=3;
+
+//x = x * 4;
+//x*=4;
+
+ //x = x / 5;
+//x/=5;
+
+ //x = x % 2;
+  // x%=2;
+//printf("%d\n", x);
+ //Accepting user input in C
+
+   /* char name[25]; //bytes
+    int age ;
+
+    printf("\nWhat's your name?");
+  //scanf("%s", &name);
+    fgets(name, 25, stdin);
+    name[strlen(name)-1] = '\0';//String formating to remove new character
+
+    printf("\nHow old are you?");
+    scanf("%d", &age);
+
+    printf("\nHello %s, how are you?", name);
+    printf("\nYou are %d years old", age);*/
+
+   /* double A = sqrt(9);
+    double B = pow(2, 4);
+    int C = round(3.14);
+    int D = ceil(3.14);
+    int E = floor(3.99);
+    double F = fabs(-100);
+    double G = log(3);
+    double H = sin(45);
+    double I = cos(45);
+    double J = tan(45);
+
+    printf("\n%lf", J);*/
+
+    const double PI = 3.14159;
+    double radius;
+    double circumference;
+    double area;
+
+   /* printf("\nEnter the radius of a circle: ");
+    scanf("%lf" , &radius);
+
+    circumference = 2 * PI * radius;
+    area = PI * radius * radius;
+
+    printf("\ncircumference: %lf", circumference);
+    printf("\narea: %lf", area); */ 
+
+    /*double A;
+    double B;
+    double C;
+
+    printf("Enter side A: ");
+    scanf("%lf", &A);
+
+    printf("Enter side B: ");
+    scanf("%lf", &B);
+    
+    C = sqrt(A*A + B*B);
+
+    printf("side C: %lf", C);*/
+  /*int age;
+
+  printf("\nEnter your age: ");
+  scanf("%d", &age);
+
+  if(age >= 18){
+     printf("you are now signed up!");
+  }
+  else if(age == 0){
+       printf("You can't sign up! You were just born!");
+  }    
+  else if(age < 0){
+    printf("You haven't been born yet!");
+  }
+  else{
+      printf("You are too young too young to sign up!");
+  }*/
+ // switch = A more effecient alternative to using many "else if" statements
+//           allows a value to be tested for equality against many cases
+
+
+  /*char grade;
+
+  printf("\nEnter a letter grade: ");
+  scanf("%c", &grade);
+
+  switch(grade){
+    case 'A':
+       printf("perfect!\n");
+       break;
+    case 'B':
+       printf("You did good!\n");
+       break;
+    case 'C':
+       printf("You did Okay!\n");
+       break;
+    case 'D':
+       printf("At least it's not an f!\n");
+       break;
+    case 'F':
+       printf("YOU FAILED!\n");
+       break;
+    default:
+       printf("Please enter only valid grades");*/
+
+   char unit;
+    float temp;
+
+    printf("\nis the temperature in (F) or (C)?: "); 
+    scanf("%c", &unit);
+
+    unit = toupper(unit);
+
+    if(unit == 'C'){
+        printf("\nEnter the temp in Celsius: ");
+        scanf("%f", &temp);
+        temp = (temp * 9 / 5) + 32;
+        printf("\nThe temp in Farenheit is: %.1lf", temp);   
+    }
+    else if(unit == 'F'){
+        printf("\nEnter the temp in Farenheit: ");
+        scanf("%f", &temp);
+        temp = ((temp - 32) * 5) / 9;
+        printf("\nThe temp in Celsius is: %.1lf", temp);
+
+    }
+    else{
+        printf("\n %c is not a valid unit of measurement", unit);
+
+    }
+  
+ 
+
+
+
 
 
     return 0; 
-}
+ }
