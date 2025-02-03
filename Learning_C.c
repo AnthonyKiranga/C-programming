@@ -1,33 +1,43 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 int main()
-{
+{ 
+   const int MIN = 1;
+   const int MAX = 100;
+   int guess;
+   int guesses;
+   int answer;
+
+  
+   srand(time(0));
+
+   answer = (rand() % MAX) + MIN;
 
 
-   int rows;
-   int columns;
-   char symbol;
-
-   printf("\nEnter # of rows: ");
-   scanf("%d", &rows);
-
-   printf("Enter # of columns: ");
-   scanf("%d", &columns);
-     getchar();
-
-  //scanf("%c");
-
-    printf("Enter a symbol to use: ");
-    scanf("%c", &symbol);
-
-    for(int i = 1; i <= rows; i++)
-    { 
-        for(int j = 1; j <= columns; j++)
-        {
-        printf("%c", symbol);
+  do{
+     printf("Enter a guess: ");
+     scanf("%d", &guess);
+     if(guess > answer)
+     {
+        printf("Too high!\n");
      }
-     printf("\n");
-  }  
-return 0;
+     else if(guess < answer)
+     {
+      printf("Too low!\n");
+     }
+     else{
+        printf("CORRECT!\n");
+     }
+     guesses++;
+  }while(guess != answer);
+
+  printf("***********************\n");
+  printf("answer: %d\n", answer);
+  printf("guesses: %d\n", guesses);
+  printf("***********************");
+
+  return 0;
 }
   
