@@ -1,32 +1,33 @@
 #include <stdio.h>
-#include <string.h>
 
 int main()
 {
-  char name[25];
-
-  printf("\nWhat's your name?: ");
-  fgets(name, 25, stdin);
-  name[strlen(name) - 1] = '\0';
-
-  while(strlen(name) == 0)
-  {
-    printf("\nYou did not enter your name");
-    printf("\nWhat's your name?: ");
-    fgets(name, 25, stdin);
-    name[strlen(name) - 1] = '\0';
-  }
-
-  printf("Hello %s", name);
- 
- }
 
 
+   int rows;
+   int columns;
+   char symbol;
 
+   printf("\nEnter # of rows: ");
+   scanf("%d", &rows);
 
-void hello(char name[], int age)
-{
-printf("\nHello %s", name);
-printf("\nYou are %d years old", age);
+   printf("Enter # of columns: ");
+   scanf("%d", &columns);
+     getchar();
 
+  //scanf("%c");
+
+    printf("Enter a symbol to use: ");
+    scanf("%c", &symbol);
+
+    for(int i = 1; i <= rows; i++)
+    { 
+        for(int j = 1; j <= columns; j++)
+        {
+        printf("%c", symbol);
+     }
+     printf("\n");
+  }  
+return 0;
 }
+  
